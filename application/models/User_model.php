@@ -16,21 +16,21 @@ class User_model extends CI_Model
 	// Listing
 	public function listing()
 	{
-		$this->db->select('users');
+		$this->db->select('*');
 		$this->db->from('users');
-		$this->db->order_by('users.id_user', 'desc');
+		$this->db->order_by('id_user');
 		$query = $this->db->get();
 		return $query->result();
 	}
 
-	// Total
-	public function total()
-	{
-		$this->db->select('COUNT(*) AS total');
-		$this->db->from('users');
-		$query = $this->db->get();
-		return $query->row();
-	}
+	// // Total
+	// public function total()
+	// {
+	// 	$this->db->select('COUNT(*) AS total');
+	// 	$this->db->from('users');
+	// 	$query = $this->db->get();
+	// 	return $query->row();
+	// }
 
 	// Tambah
 	public function tambah($data)
