@@ -11,7 +11,7 @@ class Login extends CI_Controller {
 		$this->load->model('user_model');
 	}
 
-	
+
 	// Login page
 	public function index()
 	{
@@ -38,7 +38,8 @@ class Login extends CI_Controller {
 		}
 		// End validasi
 		$data = array('title'		=> 'Halaman Login');
-		$this->load->view('login/list', $data, FALSE);
+		
+		$this->load->view('admin/login/list', $data, FALSE);
 	}
 
 	// Logout
