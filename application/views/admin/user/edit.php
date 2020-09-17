@@ -1,9 +1,9 @@
 <?php
-	// Notifikasi error
-	echo validation_errors('<p class="alert alert-warning">', '</p>');
+// Notifikasi error
+echo validation_errors('<p class="alert alert-warning">', '</p>');
 
-	// Form open
-	echo form_open(base_url('admin/user/tambah'));
+// Form open
+echo form_open(base_url('admin/user/tambah'));
 ?>
 <div class="card shadow mb-4">
 	<div class="card-header py-3">
@@ -53,6 +53,8 @@
 					<input type="file" name="gambar" class="form-control" required="required" placeholder="Upload gambar">
 				</div>
 			</div> -->
+
+
 			<div class="col-md-12">
 				<div class="form-group">
 					<div class="btn-group">
@@ -72,6 +74,6 @@
 	</div>
 </div>
 <?php
-	// Form close
-	echo form_close();
+// Form close
+echo form_close();
 ?>

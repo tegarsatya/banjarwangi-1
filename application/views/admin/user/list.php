@@ -1,3 +1,8 @@
+<?php
+// Form buka utk delete multiple
+echo form_open(base_url('admin/user/proses'));
+?>
+
 <div class="container-fluid">
 
 	<!-- Page Heading -->
@@ -63,11 +68,10 @@
 			</div>
 		</div>
 	</div>
-
 </div>
 <!-- /.container-fluid -->
 
-</div>
-<!-- End of Main Content -->
-
-<!-- /.mail-box-messages -->
+<?php
+// Form tutup
+echo form_close();
+?>
