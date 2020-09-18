@@ -18,7 +18,7 @@ class Berita extends CI_Controller {
 		$berita = $this->berita_model->listing();
 
 		$data = array(
-			'title'		=> 'Data berita',
+			'title'		=> 'Data berita (' . count($berita) . ')',
 			'berita'	=> $berita,
 			'isi'		=> 'admin/berita/list'
 		);
@@ -182,7 +182,7 @@ class Berita extends CI_Controller {
 						'slug_berita'			=> url_title($i->post('nama_berita'), 'dash', TRUE),
 						'nama_berita'			=> $i->post('nama_berita'),
 						'isi'					=> $i->post('isi'),
-						'jenis_berita'			=> $i->post('jenis_berita'),
+						// 'jenis_berita'			=> $i->post('jenis_berita'),
 						'status_berita'			=> $i->post('status_berita'),
 						'gambar'				=> $upload_data['uploads']['file_name']
 					);
@@ -200,9 +200,9 @@ class Berita extends CI_Controller {
 					'slug_berita'			=> url_title($i->post('nama_berita'), 'dash', TRUE),
 					'nama_berita'			=> $i->post('nama_berita'),
 					'isi'					=> $i->post('isi'),
-					'jenis_berita'			=> $i->post('jenis_berita'),
+					// 'jenis_berita'			=> $i->post('jenis_berita'),
 					'status_berita'			=> $i->post('status_berita'),
-					'gambar'				=> $upload_data['uploads']['file_name']
+					'gambar'				=> $upload_data['uploads']['file_name'],
 				);
 				$this->berita_model->edit($data);
 				$this->session->set_flashdata('sukses', 'Berita telah diedit');
