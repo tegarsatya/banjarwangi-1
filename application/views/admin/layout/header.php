@@ -54,10 +54,10 @@
  			<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
  				<div class="bg-white py-2 collapse-inner rounded">
  					<h6 class="collapse-header">Berita & Kategori Berita:</h6>
- 					<a class="collapse-item" href="utilities-color.html">Berita</a>
- 					<a class="collapse-item" href="utilities-border.html">Tambah Data Berita</a>
- 					<a class="collapse-item" href="<?= base_url('admin/kategori')?>">Kategori</a>
- 					<a class="collapse-item" href="<?= base_url ('admin/kategori/tambah') ?>">Tambah Data Kategori</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/berita') ?>">Data Berita</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/berita/tambah') ?>">Tambah Data Berita</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/kategori') ?>">Data Kategori</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/kategori/tambah') ?>">Tambah Data Kategori</a>
  				</div>
  			</div>
  		</li>

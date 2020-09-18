@@ -175,7 +175,7 @@
  						</a>
  						<a class="dropdown-item" href="<?= base_url('login/logout') ?>">
  							<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
- 							Activity Log
+ 							Logout
  						</a>
  					</div>
  				</li>

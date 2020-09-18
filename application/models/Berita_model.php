@@ -43,7 +43,7 @@ class Berita_model extends CI_Model
 	//Kategori
 	public function kategori($id_kategori)
 	{
-		$this->db->select('berita.*, kategori_berita.nama_kategori_berita, users.nama');
+		$this->db->select('berita.*, kategori_berita.nama_kategori, users.nama');
 		$this->db->from('berita');
 		// Join
 		$this->db->join('kategori_berita', 'kategori_berita.id_kategori = berita.id_kategori', 'LEFT');
