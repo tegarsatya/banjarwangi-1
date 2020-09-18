@@ -23,6 +23,21 @@ class User_model extends CI_Model
 		return $query->result();
 	}
 
+	// Login
+	public function login($username, $password)
+	{
+		$this->db->select('*');
+		$this->db->from('users');
+		// where
+		$this->db->where(array(
+			'username'	=> $username,
+			'password'	=> sha1($password)
+		));
+		$this->db->order_by('id_user');
+		$query = $this->db->get();
+		return $query->row();
+	}
+
 	// // Total
 	// public function total()
 	// {
@@ -39,7 +54,7 @@ class User_model extends CI_Model
 		$this->db->from('users');
 		// where
 		$this->db->where('users.id_user', $id_user);
-		$this->db->order_by('users.id_user', 'desc');
+		$this->db->order_by('users.id_user');
 		$query = $this->db->get();
 		return $query->row();
 	}

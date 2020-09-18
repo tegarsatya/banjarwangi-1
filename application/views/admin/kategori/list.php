@@ -1,6 +1,6 @@
 <?php
 // Form buka utk delete multiple
-echo form_open(base_url('admin/user/proses'));
+echo form_open(base_url('admin/kategori/proses'));
 ?>
 
 <div class="container-fluid">
@@ -9,7 +9,7 @@ echo form_open(base_url('admin/user/proses'));
 	<h1 class="h3 mb-2 text-gray-800"><?php echo $title ?></h1>
 	<p>
 		<div class="btn-group">
-			<a href="<?php echo base_url('admin/user/tambah') ?>" class="btn btn-success btn-lg">
+			<a href="<?php echo base_url('admin/kategori/tambah') ?>" class="btn btn-success btn-lg">
 				<i class="fa fa-plus"></i> Tambah Baru</a>
 
 			<button class="btn btn-danger btn-lg" name="hapus" type="submit">
@@ -30,10 +30,8 @@ echo form_open(base_url('admin/user/proses'));
 					<thead>
 						<tr>
 							<th>NO</th>
-							<th>NAMA</th>
-							<th>USERNAME</th>
-							<th>AKSES LEVEL</th>
-							<th>EMAIL</th>
+							<th>Nama Kategori</th>
+							<th>Slug Kategori</th>
 							<th>ACTION</th>
 						</tr>
 					</thead>
@@ -41,21 +39,21 @@ echo form_open(base_url('admin/user/proses'));
 						<?php
 						// Looping data user dg foreach
 						$i = 1;
-						foreach ($user as $user) {
+						foreach ($kategori as $kategori) {
 						?>
 
 							<tr>
 								<td class="text-center">
-									<input type="checkbox" name="id_user[]" value="<?php echo $user->id_user ?>">
+									<input type="checkbox" name="id_kategori[]" value="<?php echo $kategori->id_kategori ?>">
 								</td>
-								<td><?php echo $user->nama ?></td>
-								<td><?php echo $user->username ?></td>
-								<td><?php echo $user->akses_level ?></td>
-								<td><?php echo $user->email ?></td>
+
+								<td><?php echo $kategori->nama_kategori ?></td>
+								<td><?php echo $kategori->slug_kategori ?></td>
+	
 								<td>
 									<div class="btn-group">
-										<a href="<?php echo base_url('admin/user/edit/' . $user->id_user) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Edit</a>
-										<a href="<?php echo base_url('admin/user/delete/' . $user->id_user) ?>" class="btn btn-danger btn-sm" onclick="confirmation(event)"><i class="fa fa-trash"></i> Hapus</a>
+										<a href="<?php echo base_url('admin/kategori/edit/' . $kategori->id_kategori) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Edit</a>
+										<a href="<?php echo base_url('admin/kategori/delete/' . $kategori->id_kategori) ?>" class="btn btn-danger btn-sm" onclick="confirmation(event)"><i class="fa fa-trash"></i> Hapus</a>
 									</div>
 								</td>
 							</tr>

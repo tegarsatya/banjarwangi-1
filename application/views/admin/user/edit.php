@@ -3,7 +3,7 @@
 echo validation_errors('<p class="alert alert-warning">', '</p>');
 
 // Form open
-echo form_open(base_url('admin/user/tambah'));
+echo form_open(base_url('admin/user/edit' . $user->id_user));
 ?>
 <div class="card shadow mb-4">
 	<div class="card-header py-3">
@@ -14,19 +14,19 @@ echo form_open(base_url('admin/user/tambah'));
 			<div class="col-md-6">
 				<div class="form-group">
 					<label>Nama User <span class="text-danger">*</span></label>
-					<input type="text" name="nama" class="form-control form-control-lg" value="<?php echo set_value('nama') ?>" placeholder="Nama User" required>
+					<input type="text" name="nama" class="form-control form-control-lg" value="<?php echo $user->nama ?>" placeholder="Nama User" required>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="form-group">
 					<label>Username <span class="text-danger">*</span></label>
-					<input type="text" name="username" class="form-control form-control-lg" value="<?php echo set_value('username') ?>" placeholder="username" required>
+					<input type="text" name="username" class="form-control form-control-lg" value="<?php echo $user->username ?>" placeholder="username" required>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="form-group">
 					<label>Password <span class="text-danger">*</span></label>
-					<input type="password" name="password" class="form-control form-control-lg" value="<?php echo set_value('password') ?>" placeholder="Password" required>
+					<input type="password" name="password" class="form-control form-control-lg" value="<?php echo $user->password ?>" placeholder="Password" required>
 				</div>
 			</div>
 
@@ -43,7 +43,7 @@ echo form_open(base_url('admin/user/tambah'));
 			<div class="col-md-6">
 				<div class="form-group">
 					<label>Email <span class="text-danger">*</span></label>
-					<input type="email" name="email" class="form-control" value="<?php echo set_value('email') ?>" placeholder="Email" required>
+					<input type="email" name="email" class="form-control" value="<?php echo $user->email ?>" placeholder="Email" required>
 				</div>
 			</div>
 

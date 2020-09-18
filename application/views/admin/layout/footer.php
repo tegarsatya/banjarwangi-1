@@ -1,4 +1,3 @@
-
 <!-- SWEETALERT -->
 <?php if ($this->session->flashdata('sukses')) { ?>
 	<script>
@@ -59,7 +58,6 @@ $awal = $sek - 100;
 				}
 			});
 	}
-
 </script>
 
 
@@ -97,7 +95,7 @@ $awal = $sek - 100;
 			<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
 			<div class="modal-footer">
 				<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-				<a class="btn btn-primary" href="login.html">Logout</a>
+				<a class="btn btn-primary" href="<?= base_url('logout') ?>">Logout</a>
 			</div>
 		</div>
 	</div>
@@ -119,6 +117,92 @@ $awal = $sek - 100;
 
 <!-- Page level custom scripts -->
 <script src="<?php echo base_url() ?>assets/admin/js/demo/datatables-demo.js"></script>
+
+<script>
+	$(function() {
+		$("#example1").DataTable();
+		$('#example2').DataTable({
+			"paging": true,
+			"lengthChange": false,
+			"searching": false,
+			"ordering": true,
+			"info": true,
+			"autoWidth": false
+		});
+	});
+</script>
+
+<!-- Page Script -->
+<script>
+	$(function() {
+		//Initialize Select2 Elements
+		$('.select2').select2()
+		//Enable iCheck plugin for checkboxes
+		//iCheck for checkbox and radio inputs
+		$('.mailbox-messages input[type="checkbox"]').iCheck({
+			checkboxClass: 'icheckbox_flat-blue',
+			radioClass: 'iradio_flat-blue'
+		})
+
+		//Enable check and uncheck all functionality
+		$('.checkbox-toggle').click(function() {
+			var clicks = $(this).data('clicks')
+			if (clicks) {
+				//Uncheck all checkboxes
+				$('.mailbox-messages input[type=\'checkbox\']').iCheck('uncheck')
+				$('.fa', this).removeClass('fa-check-square-o').addClass('fa-square-o')
+			} else {
+				//Check all checkboxes
+				$('.mailbox-messages input[type=\'checkbox\']').iCheck('check')
+				$('.fa', this).removeClass('fa-square-o').addClass('fa-check-square-o')
+			}
+			$(this).data('clicks', !clicks)
+		})
+
+		//Handle starring for glyphicon and font awesome
+		$('.mailbox-star').click(function(e) {
+			e.preventDefault()
+			//detect type
+			var $this = $(this).find('a > i')
+			var glyph = $this.hasClass('glyphicon')
+			var fa = $this.hasClass('fa')
+
+			//Switch states
+			if (glyph) {
+				$this.toggleClass('glyphicon-star')
+				$this.toggleClass('glyphicon-star-empty')
+			}
+
+			if (fa) {
+				$this.toggleClass('fa-star')
+				$this.toggleClass('fa-star-o')
+			}
+		})
+	})
+</script>
+
+<script>
+	$(function() {
+		// Replace the <textarea id="editor1"> with a CKEditor
+		// instance, using default configuration.
+		ClassicEditor
+			.create(document.querySelector('#editor1'))
+			.then(function(editor) {
+				// The editor instance
+			})
+			.catch(function(error) {
+				console.error(error)
+			})
+
+		// bootstrap WYSIHTML5 - text editor
+
+		$('.textareaku').wysihtml5({
+			toolbar: {
+				fa: true
+			}
+		})
+	})
+</script>
 
 </body>
 

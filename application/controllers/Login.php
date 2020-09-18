@@ -33,6 +33,7 @@ class Login extends CI_Controller {
 		if ($this->form_validation->run()) {
 			$username 	= strip_tags($this->input->post('username'));
 			$password 	= strip_tags($this->input->post('password'));
+			
 			// Proses ke simple login
 			$this->simple_login->login($username, $password);
 		}

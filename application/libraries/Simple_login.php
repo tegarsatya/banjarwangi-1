@@ -89,8 +89,10 @@ class Simple_login
 		{
 			$this->CI->session->set_flashdata('warning', 'Anda belum login');
 			redirect(base_url('login'),'refresh');
+			
 		}
 	}
+
 }
 
 /* End of file Simple_login.php */

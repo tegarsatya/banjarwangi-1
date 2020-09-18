@@ -19,6 +19,7 @@
 	<link href="<?php echo base_url() ?>assets/admin/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
+
 <body class="bg-gradient-primary">
 	<div class="container">
 		<!-- Outer Row -->
@@ -34,36 +35,36 @@
 									<div class="text-center">
 										<h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
 									</div>
-										<?php
-										// Notifikasi error
-										echo validation_errors('<p class="alert alert-warning">', '</p>');
+									<?php
+									// Notifikasi error
+									echo validation_errors('<p class="alert alert-warning">', '</p>');
 
-										// Form open 
-										echo form_open(base_url('login'));
-										?>
-											<div class="form-group">
-												<input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="username">
-											</div>
-											<div class="form-group">
-												<input type="password" name="password" class="form-control form-control-user"  id="exampleInputPassword" placeholder="Password">
-											</div>
-											<div class="form-group">
-												<div class="custom-control custom-checkbox small">
-													<input type="checkbox" class="custom-control-input" id="customCheck">
-													<label class="custom-control-label" for="customCheck">Remember Me</label>
-												</div>
-											</div>
-											<a href="index.html" class="btn btn-primary btn-user btn-block">
-												Login
-											</a>
-											<hr>
-											<a href="index.html" class="btn btn-google btn-user btn-block">
-												<i class="fab fa-google fa-fw"></i> Login with Google
-											</a>
-											<a href="index.html" class="btn btn-facebook btn-user btn-block">
-												<i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-											</a>
-										<?php echo form_close(); ?>
+									// Form open 
+									echo form_open(base_url('login'));
+									?>
+									<div class="form-group">
+										<input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="username">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<div class="custom-control custom-checkbox small">
+											<input type="checkbox" class="custom-control-input" id="customCheck">
+											<label class="custom-control-label" for="customCheck">Remember Me</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<button type="submit" class="btn btn-primary btn-block btn-lg">Login</button>
+									</div>
+									<hr>
+									<a href="index.html" class="btn btn-google btn-user btn-block">
+										<i class="fab fa-google fa-fw"></i> Login with Google
+									</a>
+									<a href="index.html" class="btn btn-facebook btn-user btn-block">
+										<i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+									</a>
+									<?php echo form_close(); ?>
 									<hr>
 									<div class="text-center">
 										<a class="small" href="forgot-password.html">Forgot Password?</a>
@@ -82,7 +83,17 @@
 		</div>
 
 	</div>
+	<?php if ($this->session->flashdata('sukses')) { ?>
+		<script>
+			swal("Berhasil", "<?php echo $this->session->flashdata('sukses'); ?>", "success")
+		</script>
+	<?php } ?>
 
+	<?php if ($this->session->flashdata('warning')) { ?>
+		<script>
+			swal("Oops...", "<?php echo $this->session->flashdata('warning'); ?>", "warning")
+		</script>
+	<?php } ?>
 	<!-- Bootstrap core JavaScript-->
 	<script src="<?php echo base_url() ?>assets/admin/vendor/jquery/jquery.min.js"></script>
 	<script src="<?php echo base_url() ?>assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
