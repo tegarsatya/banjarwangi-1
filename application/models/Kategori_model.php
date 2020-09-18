@@ -31,17 +31,6 @@ class Kategori_model extends CI_Model {
 		return $query->row();
 	}
 
-	// Detail data
-	public function detail($id_kategori)
-	{
-		$this->db->select('*');
-		$this->db->from('kategori_berita');
-		$this->db->where('id_kategori', $id_kategori);
-		$this->db->order_by('id_kategori');
-		$query = $this->db->get();
-		return $query->row();
-	}
-
 	// Tambah
 	public function tambah($data)
 	{
@@ -53,6 +42,13 @@ class Kategori_model extends CI_Model {
 	{
 		$this->db->where('id_kategori', $data['id_kategori']);
 		$this->db->update('kategori_berita', $data);
+	}
+
+	// detail perkategori_berita
+	public function detail($id_kategori)
+	{
+		$query = $this->db->get_where('kategori_berita', array('id_kategori'  => $id_kategori));
+		return $query->row();
 	}
 
 	// Delete

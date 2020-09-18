@@ -54,20 +54,19 @@ class Simple_login
 		}
 	}
 
-	// Fungsi logout
+	// Logout
 	public function logout()
 	{
-		// Meng-unset semua session
-		$this->CI->session->unset_userdata('id_user');
 		$this->CI->session->unset_userdata('username');
-		$this->CI->session->unset_userdata('nama');
 		$this->CI->session->unset_userdata('akses_level');
-		$this->CI->session->unset_userdata('pengalihan');
-		// Redirect ke halaman login
-		$this->CI->session->set_flashdata('sukses', 'Anda berhasil logout');
-		redirect(base_url('login'),'refresh');
+		$this->CI->session->unset_userdata('nama');
+		$this->CI->session->unset_userdata('id_login');
+		$this->CI->session->unset_userdata('id');
+		unset($_SESSION['admin']);
+		session_destroy();
+		$this->CI->session->set_flashdata('sukses', 'Terimakasih, Anda berhasil logout');
+		redirect(base_url() . 'login');
 	}
-
 	// Fungsi check login: seseorang sudah login atau belum
 	public function check_login($pengalihan)
 	{

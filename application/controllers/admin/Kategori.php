@@ -71,51 +71,54 @@ class Kategori extends CI_Controller {
 		// End proses masuk database
 	}
 
-	// Edit kategori
+	// Edit
 	public function edit($id_kategori)
 	{
+		$kategori_berita = $this->kategori_model->detail($id_kategori);
 
 		// Validasi
-		$valid = $this->form_validation;
-
-		$valid->set_rules(
+		$this->form_validation->set_rules(
 			'nama_kategori',
 			'Nama kategori',
 			'required',
-			array('required'		=> 'Nama kategori harus diisi')
+			array('required'	=> 'Nama kategori berita harus diisi')
 		);
 
-		if ($valid->run() === FALSE) {
+		if ($this->form_validation->run() === FALSE) {
 			// End validasi
 
 			$data = array(
-
-				'title'		=> 'Edit Kategori Berita',
-				'kategori'	=> $this->kategori_model->detail($id_kategori),
-				'isi'		=> 'admin/kategori/edit'
-				
+				'title'				=> 'Edit Kategori Berita',
+				'kategori_berita'	=> $kategori_berita,
+				'isi'				=> 'admin/kategori/edit'
 			);
-			$this->load->view('admin/layout/wrapper', $data, FALSE);
-			// Proses masuk ke database
+			$this->load->view('admin/layout/wrapper', $data);
+			// Masuk database
 		} else {
-
-			$i 	= $this->input;
-			$slug 	= url_title($i->post('nama_kategori'), 'dash', TRUE);
-
+			$i 				= $this->input;
+			$slug_kategori	= url_title($i->post('nama_kategori'), 'dash', TRUE);
 			$data = array(
-				'id_kategori'	=> $id_kategori,
-				'id_user'		=> $this->session->userdata('id_user'),
-				'nama_kategori'	=> $i->post('nama_kategori'),
-				'slug_kategori'	=> $slug,
+				'id_kategori'			=> $id_kategori,
+				'slug_kategori'			=> $slug_kategori,
+				'nama_kategori'			=> $i->post('nama_kategori'),
+				'keterangan'			=> $i->post('keterangan')
 			);
-
 			$this->kategori_model->edit($data);
-			$this->session->set_flashdata('sukses', 'Data telah diedit');
-			redirect(base_url('admin/kategori'), 'refresh');
+			$this->session->set_flashdata('sukses', 'Kategori berita telah diedit');
+			redirect(base_url('admin/kategori'));
 		}
-		// End proses masuk database
+		// End masuk database
 	}
 
+	// Delete
+	public function delete($id_kategori)
+	{
+
+		$data = array('id_kategori'	=> $id_kategori);
+		$this->kategori_model->delete($data);
+		$this->session->set_flashdata('sukses', 'Kategori berita telah didelete');
+		redirect(base_url('admin/kategori'));
+	}
 
 
 }

@@ -1,3 +1,33 @@
+<script>
+	tinymce.init({
+		selector: '#isi',
+		height: 300,
+		plugins: 'print preview paste searchreplace autolink directionality visualblocks visualchars code fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools colorpicker textpattern help',
+		toolbar: 'formatselect | fontsizeselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | image | table | removeformat',
+		visual_table_class: 'tiny-table',
+		fontsize_formats: "8px 10px 12px 14px 18px 24px 36px"
+	});
+</script>
+
+<script>
+	tinymce.init({
+		selector: '.textarea',
+		height: 300,
+		plugins: 'print preview paste searchreplace autolink directionality visualblocks visualchars code fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools colorpicker textpattern help',
+		toolbar: 'formatselect | fontsizeselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | image | table | removeformat',
+		visual_table_class: 'tiny-table',
+		fontsize_formats: "8px 10px 12px 14px 18px 24px 36px"
+	});
+</script>
+<script>
+	tinymce.init({
+		selector: '.textareatengah',
+		height: 500,
+		plugins: 'print preview paste searchreplace autolink directionality visualblocks visualchars code fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools colorpicker textpattern help',
+		toolbar: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | image | table | removeformat',
+		visual_table_class: 'tiny-table'
+	});
+</script>
 <!-- SWEETALERT -->
 <?php if ($this->session->flashdata('sukses')) { ?>
 	<script>
@@ -58,6 +88,48 @@ $awal = $sek - 100;
 				}
 			});
 	}
+
+	// Kirim ulang
+	function kirim(ev) {
+		ev.preventDefault();
+		var urlToRedirect = ev.currentTarget.getAttribute('href'); //use currentTarget because the click may be on the nested i tag and not a tag causing the href to be empty
+		console.log(urlToRedirect); // verify if this is the right URL
+		swal({
+				title: "Yakin Ingin Mengirim Surat Ini?",
+				text: "Pengiriman Surat Sebaiknya Kurang dari 200 Kali/jam agar tidak terkena Blokir Server. Klik CANCEL untuk membatalkan. Klik OK untuk mengirim surat.",
+				icon: "warning",
+				buttons: true,
+				dangerMode: true,
+			})
+			.then((willDelete) => {
+				// redirect with javascript here as per your logic after showing the alert using the urlToRedirect value
+				if (willDelete) {
+					// Proses ke URL
+					window.location.href = urlToRedirect;
+				}
+			});
+	}
+	// Akses
+	// Sweet alert
+	function akses(ev) {
+		ev.preventDefault();
+		var urlToRedirect = ev.currentTarget.getAttribute('href'); //use currentTarget because the click may be on the nested i tag and not a tag causing the href to be empty
+		console.log(urlToRedirect); // verify if this is the right URL
+		swal({
+				title: "Yakin ingin memberi akses?",
+				text: "Data yang diberi akses akan bisa login",
+				icon: "warning",
+				buttons: true,
+				dangerMode: true,
+			})
+			.then((willDelete) => {
+				// redirect with javascript here as per your logic after showing the alert using the urlToRedirect value
+				if (willDelete) {
+					// Proses ke URL
+					window.location.href = urlToRedirect;
+				}
+			});
+	}
 </script>
 
 
@@ -83,7 +155,7 @@ $awal = $sek - 100;
 </a>
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -99,7 +171,7 @@ $awal = $sek - 100;
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <!-- Bootstrap core JavaScript-->
 <script src="<?php echo base_url() ?>assets/admin/vendor/jquery/jquery.min.js"></script>

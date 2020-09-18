@@ -3,7 +3,7 @@
 echo validation_errors('<p class="alert alert-warning">', '</p>');
 
 // Form open
-echo form_open(base_url('admin/kategori/edit' . $kategori->id_kategori));
+echo form_open(base_url('admin/kategori/edit' .$kategori_berita->id_kategori));
 ?>
 <div class="card shadow mb-4">
 	<div class="card-header py-3">
@@ -14,7 +14,7 @@ echo form_open(base_url('admin/kategori/edit' . $kategori->id_kategori));
 			<div class="col-md-12">
 				<div class="form-group">
 					<label>Nama Kategori <span class="text-danger">*</span></label>
-					<input type="text" name="nama_kategori" class="form-control form-control-lg" value="<?php echo $kategori->nama_kategori ?>" placeholder="Nama Kategori" required>
+					<input type="text" name="nama_kategori" class="form-control form-control-lg" value="<?php echo $kategori_berita->nama_kategori ?>" placeholder="Nama Kategori" required>
 				</div>
 			</div>
 			<div class="col-md-12">

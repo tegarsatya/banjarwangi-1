@@ -21,6 +21,21 @@
 	<!-- Custom styles for this page -->
 	<link href="<?php echo base_url() ?>assets/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+	<!-- JQUERY UI -->
+	<link rel="stylesheet" href="<?php echo base_url('assets/jquery-ui/jquery-ui.min.css') ?>">
+	<script src="<?php echo base_url('assets/jquery-ui/jquery-ui.min.js') ?>" type="text/javascript"></script>
+	<!-- SWEETALERT -->
+	<!-- jquery chained -->
+	<script src="<?php echo base_url('assets/jquery-chained/jquery.chained.min.js') ?>" type="text/javascript"></script>
+	<!-- timepicker -->
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/jquery-timepicker/jquery.timepicker.min.css">
+	<!-- TINYMCE -->
+	<script src="<?php echo base_url() ?>assets/tinymce/js/tinymce/tinymce.min.js"></script>
+	<!-- viewer -->
+	<script src="<?php echo base_url() ?>assets/viewerjs/pdf.js"></script>
+	<!-- SWEETALERT -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body id="page-top">
