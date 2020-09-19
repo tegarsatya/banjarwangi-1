@@ -115,6 +115,72 @@
  			</div>
  		</li>
 
+ 		<!-- Divider -->
+ 		<hr class="sidebar-divider">
+
+ 		<!-- Heading -->
+ 		<div class="sidebar-heading">
+ 			Data Galeri
+ 		</div>
+
+ 		<!-- Nav Item - Utilities Collapse Menu -->
+ 		<li class="nav-item">
+ 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsega" aria-expanded="true" aria-controls="collapseUtilities">
+ 				<i class="fas fa-fw fa-wrench"></i>
+ 				<span>Data Galeri</span>
+ 			</a>
+ 			<div id="collapsega" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+ 				<div class="bg-white py-2 collapse-inner rounded">
+ 					<h6 class="collapse-header">Galeri</h6>
+ 					<a class="collapse-item" href="<?= base_url('admin/galeri') ?>">Data galeri</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/galeri/tambah') ?>">Tambah Data Galeri</a>
+ 				</div>
+ 			</div>
+ 		</li>
+
+ 		<!-- Divider -->
+ 		<hr class="sidebar-divider">
+
+ 		<!-- Heading -->
+ 		<div class="sidebar-heading">
+ 			Data Pengajar
+ 		</div>
+
+ 		<!-- Nav Item - Utilities Collapse Menu -->
+ 		<li class="nav-item">
+ 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsepa" aria-expanded="true" aria-controls="collapseUtilities">
+ 				<i class="fas fa-fw fa-wrench"></i>
+ 				<span>Data Pengajar</span>
+ 			</a>
+ 			<div id="collapsepa" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+ 				<div class="bg-white py-2 collapse-inner rounded">
+ 					<h6 class="collapse-header">Galeri</h6>
+ 					<a class="collapse-item" href="<?= base_url('admin/pengajar') ?>">Data Pengajar</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/pengajar/tambah') ?>">Tambah Data Pengajar</a>
+ 				</div>
+ 			</div>
+ 		</li>
+
+
+ 		<!-- Heading -->
+ 		<div class="sidebar-heading">
+ 			Data Buku Tamu
+ 		</div>
+
+ 		<!-- Nav Item - Utilities Collapse Menu -->
+ 		<li class="nav-item">
+ 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsea" aria-expanded="true" aria-controls="collapseUtilities">
+ 				<i class="fas fa-fw fa-wrench"></i>
+ 				<span>Data Buku Tamu</span>
+ 			</a>
+ 			<div id="collapsea" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+ 				<div class="bg-white py-2 collapse-inner rounded">
+ 					<h6 class="collapse-header">Galeri</h6>
+ 					<a class="collapse-item" href="<?= base_url('admin/buku_tamu') ?>">Data Buku Tamu</a>
+ 				</div>
+ 			</div>
+ 		</li>
+
  		<!-- Nav Item - Tables -->
  		<li class="nav-item active">
  			<a class="nav-link" href="tables.html">

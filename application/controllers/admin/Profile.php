@@ -55,7 +55,7 @@ class Profile extends CI_Controller {
 				// End validasi
 
 				$data = array(
-					'title'		=> 'Tambah Visi & Misi',
+					'title'		=> 'Tambah Data Profil',
 					'profil'	=> $profile,
 					'error'		=> $this->upload->display_errors(),
 					'isi'		=> 'admin/profile/tambah'
