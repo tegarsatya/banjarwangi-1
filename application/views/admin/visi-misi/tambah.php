@@ -39,44 +39,45 @@ echo validation_errors('<div class="alert alert-success">', '</div>');
 // Form
 echo form_open_multipart('admin/visi_misi/tambah');
 ?>
-<div class="card shadow mb-4">
-	<div class="card-header py-3">
-		<h6 class="m-0 font-weight-bold text-primary"><?php echo $title ?></h6>
-	</div>
-	<div class="card-body">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="form-group">
-					<label>Upload gambar</label>
-					<input type="file" name="gambar" class="form-control">
+<div class="container-fluid">
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary"><?php echo $title ?></h6>
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label>Upload gambar</label>
+						<input type="file" name="gambar" class="form-control">
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="form-group">
+						<label>Isi Berita</label>
+						<textarea name="isi" class="form-control" placeholder="isi" id="isi"><?php echo set_value('isi') ?></textarea>
+					</div>
 				</div>
 			</div>
 
 			<div class="col-md-12">
 				<div class="form-group">
-					<label>Isi Berita</label>
-					<textarea name="isi" class="form-control" placeholder="isi" id="isi"><?php echo set_value('isi') ?></textarea>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-12">
-			<div class="form-group">
-				<div class="btn-group">
-					<button class="btn btn-success btn-lg" name="submit" type="submit">
-						<i class="fa fa-save"></i> Simpan
-					</button>
-					<button class="btn btn-info btn-lg" name="reset" type="reset">
-						<i class="fa fa-times"></i> Reset
-					</button>
-					<a href="<?php echo base_url('admin/visi_misi') ?>" class="btn btn-warning btn-lg">
-						<i class="fa fa-backward"></i> Kembali
-					</a>
+					<div class="btn-group">
+						<button class="btn btn-success btn-lg" name="submit" type="submit">
+							<i class="fa fa-save"></i> Simpan
+						</button>
+						<button class="btn btn-info btn-lg" name="reset" type="reset">
+							<i class="fa fa-times"></i> Reset
+						</button>
+						<a href="<?php echo base_url('admin/visi_misi') ?>" class="btn btn-warning btn-lg">
+							<i class="fa fa-backward"></i> Kembali
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </div>
 <?php
 // Form close

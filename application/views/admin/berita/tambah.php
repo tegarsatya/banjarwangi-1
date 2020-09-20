@@ -39,80 +39,81 @@ echo validation_errors('<div class="alert alert-success">', '</div>');
 // Form
 echo form_open_multipart('admin/berita/tambah');
 ?>
-<div class="card shadow mb-4">
-	<div class="card-header py-3">
-		<h6 class="m-0 font-weight-bold text-primary"><?php echo $title ?></h6>
-	</div>
-	<div class="card-body">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="form-group">
-					<label>Nama Berita <span class="text-danger">*</span></label>
-					<input type="text" name="nama_berita" class="form-control form-control-lg" value="<?php echo set_value('nama_berita') ?>" placeholder="Nama Berita" required>
+<div class="container-fluid">
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary"><?php echo $title ?></h6>
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label>Nama Berita <span class="text-danger">*</span></label>
+						<input type="text" name="nama_berita" class="form-control form-control-lg" value="<?php echo set_value('nama_berita') ?>" placeholder="Nama Berita" required>
+					</div>
 				</div>
-			</div>
 
-			<!-- <div class="col-md-12">
+				<!-- <div class="col-md-12">
 				<div class="form-group">
 					<label>Judul Berita <span class="text-danger">*</span></label>
 					<input type="text" name="judul_berita" class="form-control form-control-lg" value="<?php echo set_value('judul_berita') ?>" placeholder="Judul Berita" required>
 				</div>
 			</div> -->
 
-			<div class="col-md-6">
-				<div class="form-group form-group-lg">
-					<label>Status Berita</label>
-					<select name="status_berita" class="form-control">
-						<option value="Publish">Publikasikan</option>
-						<option value="Draft">Simpan sebagai Draft</option>
-					</select>
+				<div class="col-md-6">
+					<div class="form-group form-group-lg">
+						<label>Status Berita</label>
+						<select name="status_berita" class="form-control">
+							<option value="Publish">Publikasikan</option>
+							<option value="Draft">Simpan sebagai Draft</option>
+						</select>
+					</div>
 				</div>
-			</div>
 
-			<div class="col-md-6">
-				<div class="form-group">
-					<label>Kategori Berita</label>
-					<select name="id_kategori_berita" class="form-control">
-						<?php foreach ($kategori as $kategori) { ?>
-							<option value="<?php echo $kategori->id_kategori ?>">
-								<?php echo $kategori->nama_kategori ?></option>
-						<?php } ?>
-					</select>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Kategori Berita</label>
+						<select name="id_kategori_berita" class="form-control">
+							<?php foreach ($kategori as $kategori) { ?>
+								<option value="<?php echo $kategori->id_kategori ?>">
+									<?php echo $kategori->nama_kategori ?></option>
+							<?php } ?>
+						</select>
+					</div>
 				</div>
-			</div>
 
-			<div class="col-md-6">
-				<div class="form-group">
-					<label>Upload gambar</label>
-					<input type="file" name="gambar" class="form-control">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Upload gambar</label>
+						<input type="file" name="gambar" class="form-control">
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="form-group">
+						<label>Isi Berita</label>
+						<textarea name="isi" class="form-control" placeholder="isi" id="isi"><?php echo set_value('isi') ?></textarea>
+					</div>
 				</div>
 			</div>
 
 			<div class="col-md-12">
 				<div class="form-group">
-					<label>Isi Berita</label>
-					<textarea name="isi" class="form-control" placeholder="isi" id="isi"><?php echo set_value('isi') ?></textarea>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-12">
-			<div class="form-group">
-				<div class="btn-group">
-					<button class="btn btn-success btn-lg" name="submit" type="submit">
-						<i class="fa fa-save"></i> Simpan
-					</button>
-					<button class="btn btn-info btn-lg" name="reset" type="reset">
-						<i class="fa fa-times"></i> Reset
-					</button>
-					<a href="<?php echo base_url('admin/berita') ?>" class="btn btn-warning btn-lg">
-						<i class="fa fa-backward"></i> Kembali
-					</a>
+					<div class="btn-group">
+						<button class="btn btn-success btn-lg" name="submit" type="submit">
+							<i class="fa fa-save"></i> Simpan
+						</button>
+						<button class="btn btn-info btn-lg" name="reset" type="reset">
+							<i class="fa fa-times"></i> Reset
+						</button>
+						<a href="<?php echo base_url('admin/berita') ?>" class="btn btn-warning btn-lg">
+							<i class="fa fa-backward"></i> Kembali
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </div>
 <?php
 // Form close

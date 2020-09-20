@@ -9,6 +9,11 @@ class User extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('user_model');
+
+		$url_pengalihan = str_replace('index.php/', '', current_url());
+		$pengalihan 	= $this->session->set_userdata('pengalihan', $url_pengalihan);
+		// Ambil check login dari simple_login
+		$this->simple_login->check_login($pengalihan);
 	}
 
 
@@ -103,13 +108,6 @@ class User extends CI_Controller {
 		);
 
 		$validasi->set_rules(
-			'username',
-			'Username',
-			'required',
-			array('required'		=> '%s harus diisi')
-		);
-
-		$validasi->set_rules(
 			'password',
 			'Password',
 			'required',
@@ -120,7 +118,7 @@ class User extends CI_Controller {
 			// End validasi
 
 			$data = array(
-				'title'		=> 'Edit User: ' . $user->nama,
+				'title'		=> 'Edit User : ' . $user->nama,
 				'user'		=> $user,
 				'isi'		=> 'admin/user/edit'
 			);
@@ -138,9 +136,11 @@ class User extends CI_Controller {
 				'akses_level'	=> $inp->post('akses_level'),
 				'tanggal'		=> date('Y-m-d H:i:s')
 			);
+
 			$this->user_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Data telah diupdate');
 			redirect(base_url('admin/user'), 'refresh');
+
 		}
 		// End masuk database
 	}

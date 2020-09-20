@@ -39,66 +39,67 @@ echo validation_errors('<div class="alert alert-success">', '</div>');
 // Form
 echo form_open_multipart('admin/pengajar/tambah');
 ?>
-<div class="card shadow mb-4">
-	<div class="card-header py-3">
-		<h6 class="m-0 font-weight-bold text-primary"><?php echo $title ?></h6>
-	</div>
-	<div class="card-body">
-		<div class="row">
+<div class="container-fluid">
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary"><?php echo $title ?></h6>
+		</div>
+		<div class="card-body">
+			<div class="row">
 
-			<div class="col-md-6">
-				<div class="form-group">
-					<label>Nama Guru <span class="text-danger">*</span></label>
-					<input type="text" name="nama_pengajar" class="form-control form-control-lg" value="<?php echo set_value('nama_pengajar') ?>" placeholder="Nama pengajar" required>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Nama Guru <span class="text-danger">*</span></label>
+						<input type="text" name="nama_pengajar" class="form-control form-control-lg" value="<?php echo set_value('nama_pengajar') ?>" placeholder="Nama pengajar" required>
+					</div>
 				</div>
-			</div>
 
-			<div class="col-md-6">
-				<div class="form-group">
-					<label>Jabatan guru <span class="text-danger">*</span></label>
-					<input type="text" name="jabatan_pengajar" class="form-control form-control-lg" value="<?php echo set_value('jabatan_pengajar') ?>" placeholder="Jabatan pengajar" required>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Jabatan guru <span class="text-danger">*</span></label>
+						<input type="text" name="jabatan_pengajar" class="form-control form-control-lg" value="<?php echo set_value('jabatan_pengajar') ?>" placeholder="Jabatan pengajar" required>
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="form-group">
+						<label>Pengampuh Mata Pelajaran <span class="text-danger">*</span></label>
+						<input type="text" name="pengampu" class="form-control form-control-lg" value="<?php echo set_value('pengampu') ?>" placeholder="Pengampu" required>
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="form-group">
+						<label>Upload gambar</label>
+						<input type="file" name="gambar" class="form-control">
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="form-group">
+						<label>Keterangan Penagajar</label>
+						<textarea name="isi" class="form-control" placeholder="isi" id="isi"><?php echo set_value('isi') ?></textarea>
+					</div>
 				</div>
 			</div>
 
 			<div class="col-md-12">
 				<div class="form-group">
-					<label>Pengampuh Mata Pelajaran <span class="text-danger">*</span></label>
-					<input type="text" name="pengampu" class="form-control form-control-lg" value="<?php echo set_value('pengampu') ?>" placeholder="Pengampu" required>
-				</div>
-			</div>
-
-			<div class="col-md-12">
-				<div class="form-group">
-					<label>Upload gambar</label>
-					<input type="file" name="gambar" class="form-control">
-				</div>
-			</div>
-
-			<div class="col-md-12">
-				<div class="form-group">
-					<label>Keterangan Penagajar</label>
-					<textarea name="isi" class="form-control" placeholder="isi" id="isi"><?php echo set_value('isi') ?></textarea>
+					<div class="btn-group">
+						<button class="btn btn-success btn-lg" name="submit" type="submit">
+							<i class="fa fa-save"></i> Simpan
+						</button>
+						<button class="btn btn-info btn-lg" name="reset" type="reset">
+							<i class="fa fa-times"></i> Reset
+						</button>
+						<a href="<?php echo base_url('admin/profile') ?>" class="btn btn-warning btn-lg">
+							<i class="fa fa-backward"></i> Kembali
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="col-md-12">
-			<div class="form-group">
-				<div class="btn-group">
-					<button class="btn btn-success btn-lg" name="submit" type="submit">
-						<i class="fa fa-save"></i> Simpan
-					</button>
-					<button class="btn btn-info btn-lg" name="reset" type="reset">
-						<i class="fa fa-times"></i> Reset
-					</button>
-					<a href="<?php echo base_url('admin/profile') ?>" class="btn btn-warning btn-lg">
-						<i class="fa fa-backward"></i> Kembali
-					</a>
-				</div>
-			</div>
-		</div>
 	</div>
-</div>
 </div>
 <?php
 // Form close

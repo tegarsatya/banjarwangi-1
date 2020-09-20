@@ -12,6 +12,11 @@ class Berita extends CI_Controller {
 		parent::__construct();
 		$this->load->model('berita_model');
 		$this->load->model('kategori_model');
+
+		$url_pengalihan = str_replace('index.php/', '', current_url());
+		$pengalihan 	= $this->session->set_userdata('pengalihan', $url_pengalihan);
+		// Ambil check login dari simple_login
+		$this->simple_login->check_login($pengalihan);
 	}
 	public function index()
 	{

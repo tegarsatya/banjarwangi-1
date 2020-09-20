@@ -54,8 +54,8 @@ echo form_open(base_url('admin/user/proses'));
 								<td><?php echo $user->email ?></td>
 								<td>
 									<div class="btn-group">
-										<a href="<?php echo base_url('admin/user/edit/' . $user->id_user) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Edit</a>
-										<a href="<?php echo base_url('admin/user/delete/' . $user->id_user) ?>" class="btn btn-danger btn-sm" onclick="confirmation(event)"><i class="fa fa-trash"></i> Hapus</a>
+										<a href="<?php echo base_url('admin/user/edit/' .$user->id_user) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Edit</a>
+										<a href="<?php echo base_url('admin/user/delete/' .$user->id_user) ?>" class="btn btn-danger btn-sm" onclick="confirmation(event)"><i class="fa fa-trash"></i> Hapus</a>
 									</div>
 								</td>
 							</tr>
