@@ -24,14 +24,14 @@
 				<div class="classynav">
 					<ul>
 						<li><a href="<?= base_url('home') ?>">Home</a></li>
-						<li><a href="<?= base_url('profil') ?>">profil</a></li>
+						<li><a href="<?= base_url('profil') ?>">Profil</a></li>
 						<li><a href="<?= base_url('visi_misi') ?>">Visi & Misi</a></li>
 						<li><a href="<?= base_url('berita') ?>">Berita</a></li>
-						<li><a href="<?= base_url('pengajar') ?>">Data Pengajar</a></li>
+						<li><a href="<?= base_url('pengajar') ?>">Guru</a></li>
+						<li><a href="<?= base_url('penerimaan') ?>">Syarat Penerimaan Siswa </a></li>
 						<li><a href="<?= base_url('galeri') ?>">galeri</a></li>
-						<li><a href="<?= base_url('buku_tamu') ?>">Buku Tamu</a></li>
 						<li><a href="<?= base_url('kontak') ?>">Contact</a></li>
-						
+
 					</ul>
 
 					<!-- Search Button -->

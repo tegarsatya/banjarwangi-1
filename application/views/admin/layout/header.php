@@ -22,7 +22,8 @@
  				<span>Dashboard</span></a>
  		</li>
 
- 		<!-- Divider -->
+
+		 <!-- Data pengguna Sistem -->
  		<hr class="sidebar-divider">
 
  		<!-- Heading -->
@@ -45,7 +46,8 @@
  			</div>
  		</li>
 
- 		<!-- Divider -->
+		 <!-- Data Berita dan Kategori Berita -->
+
  		<hr class="sidebar-divider">
 
  		<!-- Heading -->
@@ -70,7 +72,7 @@
  			</div>
  		</li>
 
- 		<!-- Divider -->
+ 		<!-- DAta Profil sekolah -->
  		<hr class="sidebar-divider">
 
  		<!-- Heading -->
@@ -92,7 +94,7 @@
  			</div>
  		</li>
 
- 		<!-- Divider -->
+ 		<!-- Visi Misi -->
  		<hr class="sidebar-divider">
 
  		<!-- Heading -->
@@ -115,7 +117,7 @@
  			</div>
  		</li>
 
- 		<!-- Divider -->
+ 		<!-- galeri -->
  		<hr class="sidebar-divider">
 
  		<!-- Heading -->
@@ -138,7 +140,7 @@
  			</div>
  		</li>
 
- 		<!-- Divider -->
+ 		<!-- pengajar-->
  		<hr class="sidebar-divider">
 
  		<!-- Heading -->
@@ -157,6 +159,30 @@
  					<h6 class="collapse-header">Galeri</h6>
  					<a class="collapse-item" href="<?= base_url('admin/pengajar') ?>">Data Pengajar</a>
  					<a class="collapse-item" href="<?= base_url('admin/pengajar/tambah') ?>">Tambah Data Pengajar</a>
+ 				</div>
+ 			</div>
+		 </li>
+		 
+
+		 <!-- Penerimaan siswa -->
+ 		<hr class="sidebar-divider">
+
+ 		<!-- Heading -->
+ 		<div class="sidebar-heading">
+ 			Data Syarat Penerimaan Siswa Baru
+ 		</div>
+
+ 		<!-- Nav Item - Utilities Collapse Menu -->
+ 		<li class="nav-item">
+ 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#opps" aria-expanded="true" aria-controls="collapseUtilities">
+ 				<i class="fas fa-fw fa-wrench"></i>
+ 				<span>Penerimaan siswa</span>
+ 			</a>
+ 			<div id="opps" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+ 				<div class="bg-white py-2 collapse-inner rounded">
+ 					<h6 class="collapse-header">Galeri</h6>
+ 					<a class="collapse-item" href="<?= base_url('admin/penerimaan') ?>">Data Penerimaan</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/pengajar/tambah') ?>">Tambah Data penerimaan</a>
  				</div>
  			</div>
  		</li>

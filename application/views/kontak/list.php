@@ -37,21 +37,21 @@
                     <div class="contact-form">
                         <h4>Get In Touch</h4>
                         
-                        <form action="#" method="post">
+                        <form action="<?php echo base_url() ?>kontak/simpan_kontak" method="post">
                             <div class="row">
                                 <div class="col-12 col-lg-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="text" placeholder="Name">
+                                        <input type="text" name="nama" class="form-control" id="nama" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                        <textarea  name="pesan" class="form-control" id="pesan" cols="30" rows="10" placeholder="Message"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">

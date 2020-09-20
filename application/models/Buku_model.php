@@ -26,6 +26,13 @@ class Buku_model extends CI_Model {
 		$this->db->where('id_buku_tamu', $data['id_buku_tamu']);
 		$this->db->delete('buku_tamu', $data);
 	}
+
+
+	// insert data
+	function insert($data)
+	{
+		$this->db->insert($this->table, $data);
+	}
 }
 
 /* End of file Buku_model.php */
