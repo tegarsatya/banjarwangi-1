@@ -36,12 +36,14 @@
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</li>
+
 						<li><a href="<?= base_url('profil') ?>">profil</a></li>
 						<li><a href="<?= base_url('visi_misi') ?>">Visi & Misi</a></li>
 						<li><a href="<?= base_url('berita') ?>">Berita</a></li>
-						<li><a href="<?= base_url('data_guru') ?>">Data Pengajar</a></li>
+						<li><a href="<?= base_url('pengajar') ?>">Data Pengajar</a></li>
 						<li><a href="<?= base_url('galeri') ?>">galeri</a></li>
 						<li><a href="<?= base_url('buku_tamu') ?>">Buku Tamu</a></li>
+
 					</ul>
 
 					<!-- Search Button -->
