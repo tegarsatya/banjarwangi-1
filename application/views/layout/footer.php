@@ -53,6 +53,9 @@
  <script src="<?php echo base_url() ?>assets/frontend/js/plugins/plugins.js"></script>
  <!-- Active js -->
  <script src="<?php echo base_url() ?>assets/frontend/js/active.js"></script>
+ 
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
+ <script src="<?php echo base_url() ?>assets/frontend/js/google-map/map-active.js"></script>
  </body>
 
  </html>

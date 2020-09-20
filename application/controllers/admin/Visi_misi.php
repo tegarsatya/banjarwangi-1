@@ -23,7 +23,7 @@ class Visi_misi extends CI_Controller {
 		// $total 	= $this->user_model->total();
 
 		$data = array(
-			'title'		=> 'Data Profile (' . count($vm) . ')',
+			'title'		=> 'Data Visi & Misi (' . count($vm) . ')',
 			'visi_misi'	=> $vm,
 			'isi'		=> 'admin/visi-misi/list'
 		);

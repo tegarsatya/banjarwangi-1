@@ -24,26 +24,14 @@
 				<div class="classynav">
 					<ul>
 						<li><a href="<?= base_url('home') ?>">Home</a></li>
-						<li><a href="#">Pages</a>
-							<ul class="dropdown">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="courses.html">Courses</a></li>
-								<li><a href="single-course.html">Single Courses</a></li>
-								<li><a href="instructors.html">Instructors</a></li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="blog-details.html">Single Blog</a></li>
-								<li><a href="regular-page.html">Regular Page</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</li>
-
 						<li><a href="<?= base_url('profil') ?>">profil</a></li>
 						<li><a href="<?= base_url('visi_misi') ?>">Visi & Misi</a></li>
 						<li><a href="<?= base_url('berita') ?>">Berita</a></li>
 						<li><a href="<?= base_url('pengajar') ?>">Data Pengajar</a></li>
 						<li><a href="<?= base_url('galeri') ?>">galeri</a></li>
 						<li><a href="<?= base_url('buku_tamu') ?>">Buku Tamu</a></li>
-
+						<li><a href="<?= base_url('kontak') ?>">Contact</a></li>
+						
 					</ul>
 
 					<!-- Search Button -->

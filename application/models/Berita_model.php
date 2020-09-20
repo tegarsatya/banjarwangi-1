@@ -28,7 +28,7 @@ class Berita_model extends CI_Model
 	//Read
 	public function read($slug_berita)
 	{
-		$this->db->select('berita.*, kategori_berita.nama_kategori, users.nama');
+		$this->db->select('berita.*, kategori_berita.id_kategori, users.nama');
 		$this->db->from('berita');
 		// Join
 		$this->db->join('kategori_berita', 'kategori_berita.id_kategori = berita.id_kategori', 'LEFT');
@@ -51,6 +51,28 @@ class Berita_model extends CI_Model
 		// End join
 		$this->db->where('berita.id_kategori', $id_kategori);
 		$this->db->order_by('id_berita', 'DESC');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	// Listing berita
+	public function berita($limit, $start)
+	{
+		$this->db->select('berita.*, 
+					users.nama, 
+					kategori_berita.nama_kategori, kategori_berita.slug_kategori,
+					kategori_berita.slug_kategori
+					');
+		$this->db->from('berita');
+		// Join dg 2 tabel
+		$this->db->join('kategori_berita', 'kategori_berita.id_kategori = berita.id_kategori', 'LEFT');
+		$this->db->join('users', 'users.id_user = berita.id_user', 'LEFT');
+		// End join
+		$this->db->where(array(
+			'berita.status_berita'	=> 'Publish',
+		));
+		$this->db->order_by('berita.tanggal', 'DESC');
+		$this->db->limit($limit, $start);
 		$query = $this->db->get();
 		return $query->result();
 	}
@@ -97,4 +119,22 @@ class Berita_model extends CI_Model
 		$this->db->where('id_berita', $data['id_berita']);
 		$this->db->delete('berita', $data);
 	}
+
+	// Listing total
+	public function total()
+	{
+		$this->db->select('berita.*, users.nama');
+		$this->db->from('berita');
+		// Join dg 2 tabel
+
+		$this->db->join('users', 'users.id_user = berita.id_user', 'LEFT');
+		// End join
+		$this->db->where(array(
+			'berita.status_berita'	=> 'Publish',
+		));
+		$this->db->order_by('id_berita', 'DESC');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
 }
