@@ -53,8 +53,8 @@ class User_model extends CI_Model
 		$this->db->select('*');
 		$this->db->from('users');
 		// where
-		$this->db->where('id_user', $id_user);
-		$this->db->order_by('id_user');
+		$this->db->where('users.id_user', $id_user);
+		$this->db->order_by('users.id_user', 'desc');
 		$query = $this->db->get();
 		return $query->row();
 	}

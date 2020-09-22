@@ -145,6 +145,9 @@ class User extends CI_Controller {
 		// End masuk database
 	}
 
+
+	
+
 	// Proses
 	public function proses()
 	{

@@ -101,7 +101,6 @@ class Kategori extends CI_Controller {
 				'id_kategori'			=> $id_kategori,
 				'slug_kategori'			=> $slug_kategori,
 				'nama_kategori'			=> $i->post('nama_kategori'),
-				'keterangan'			=> $i->post('keterangan')
 			);
 			$this->kategori_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Kategori berita telah diedit');

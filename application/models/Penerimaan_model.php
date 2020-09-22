@@ -45,9 +45,9 @@ class Penerimaan_model extends CI_Model
 	}
 
 	// detail perkategori_berita
-	public function detail($id_pengajar)
+	public function detail($id_penerimaan)
 	{
-		$query = $this->db->get_where('pengajar', array('id_pengajar'  => $id_pengajar));
+		$query = $this->db->get_where('penerimaan', array('id_penerimaan'  => $id_penerimaan));
 		return $query->row();
 	}
 

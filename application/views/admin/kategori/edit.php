@@ -3,7 +3,7 @@
 echo validation_errors('<p class="alert alert-warning">', '</p>');
 
 // Form open
-echo form_open(base_url('admin/kategori/edit' . $kategori_berita->id_kategori));
+echo form_open(base_url('admin/kategori/edit/' . $kategori_berita->id_kategori));
 ?>
 <div class="container-fluid">
 	<div class="card shadow mb-4">

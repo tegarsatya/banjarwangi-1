@@ -37,7 +37,7 @@ if (isset($error)) {
 echo validation_errors('<div class="alert alert-success">', '</div>');
 
 // Form
-echo form_open_multipart('admin/berita/edit/' . $berita->id_berita);
+echo form_open_multipart('admin/galeri/edit/' . $galeri->id_galeri);
 ?>
 <div class="container-fluid">
 	<div class="card shadow mb-4">
@@ -48,45 +48,6 @@ echo form_open_multipart('admin/berita/edit/' . $berita->id_berita);
 			<div class="row">
 				<div class="col-md-12">
 					<div class="form-group">
-						<label>Nama Berita <span class="text-danger">*</span></label>
-						<input type="text" name="nama_berita" class="form-control form-control-lg" value="<?php echo $berita->nama_berita ?>" placeholder="Nama Berita" required>
-					</div>
-				</div>
-
-				<!-- <div class="col-md-12">
-				<div class="form-group">
-					<label>Judul Berita <span class="text-danger">*</span></label>
-					<input type="text" name="judul_berita" class="form-control form-control-lg" value="<?php echo $berita->judul_berita ?>" placeholder="Judul Berita" required>
-				</div>
-			</div> -->
-
-				<div class="col-md-6">
-					<div class="form-group form-group-lg">
-						<label>Status Berita</label>
-						<select name="status_berita" class="form-control">
-							<option value="Publish">Publikasikan</option>
-							<option value="Draft">Simpan sebagai Draft</option>
-						</select>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-					<div class="form-group">
-						<label>Kategori Berita</label>
-						<select name="id_kategori_berita" class="form-control">
-							<?php foreach ($kategori as $kategori) { ?>
-								<option value="<?php echo $kategori->id_kategori ?>">
-									<?php if ($berita->id_kategori == $kategori->id_kategori) {
-										echo "selected";
-									} ?>
-									<?php echo $kategori->nama_kategori ?></option>
-							<?php } ?>
-						</select>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-					<div class="form-group">
 						<label>Upload gambar</label>
 						<input type="file" name="gambar" class="form-control">
 					</div>
@@ -94,8 +55,8 @@ echo form_open_multipart('admin/berita/edit/' . $berita->id_berita);
 
 				<div class="col-md-12">
 					<div class="form-group">
-						<label>Isi Berita</label>
-						<textarea name="isi" class="form-control" placeholder="isi" id="isi"><?php echo $berita->isi ?></textarea>
+						<label>Isi Galeri</label>
+						<textarea name="isi" class="form-control" placeholder="isi" id="isi"> <?php echo $galeri->isi ?></textarea>
 					</div>
 				</div>
 			</div>
@@ -109,7 +70,7 @@ echo form_open_multipart('admin/berita/edit/' . $berita->id_berita);
 						<button class="btn btn-info btn-lg" name="reset" type="reset">
 							<i class="fa fa-times"></i> Reset
 						</button>
-						<a href="<?php echo base_url('admin/berita') ?>" class="btn btn-warning btn-lg">
+						<a href="<?php echo base_url('admin/galeri') ?>" class="btn btn-warning btn-lg">
 							<i class="fa fa-backward"></i> Kembali
 						</a>
 					</div>

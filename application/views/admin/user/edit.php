@@ -3,7 +3,7 @@
 echo validation_errors('<p class="alert alert-warning">', '</p>');
 
 // Form open
-echo form_open(base_url('admin/user/edit' . $user->id_user));
+echo form_open(base_url('admin/user/edit/' .$user->id_user));
 ?>
 <div class="container-fluid">
 	<div class="card shadow mb-4">
@@ -54,7 +54,6 @@ echo form_open(base_url('admin/user/edit' . $user->id_user));
 					<input type="file" name="gambar" class="form-control" required="required" placeholder="Upload gambar">
 				</div>
 			</div> -->
-
 
 				<div class="col-md-12">
 					<div class="form-group">
