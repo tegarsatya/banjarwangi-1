@@ -6,10 +6,10 @@
  				<div class="page-content">
  					<h2>
  						<center>Profil Sma Banjarwangi 1</center>
-					 </h2>
-					 <hr>
+ 					</h2>
+ 					<hr>
  					<?php foreach ($profil as $pr) { ?>
- 						<img src="<?php echo base_url('assets/upload/profil/' . $pr->gambar) ?>" class="img-responsive">
+ 						<img src="<?php echo base_url('assets/upload/profil/' . $pr->gambar) ?>" class="img-responsive" width="500px" height="600px" style="display: block; margin: auto;">
  						<p><?php echo $pr->isi ?></p>
  					<?php } ?>
  				</div>

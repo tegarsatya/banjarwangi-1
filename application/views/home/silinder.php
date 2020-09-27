@@ -6,7 +6,7 @@
  				<!-- Hero Content -->
  				<div class="hero-content text-center">
  					<h2>Website Sma Banjarwangi</h2>
- 					<a href="#" class="btn clever-btn">Get Started</a>
+ 					<a href="<?= base_url('penerimaan')?>" class="btn clever-btn">Get Started</a>
  				</div>
  			</div>
  		</div>
