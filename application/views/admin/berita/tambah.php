@@ -73,7 +73,7 @@ echo form_open_multipart('admin/berita/tambah');
 				<div class="col-md-6">
 					<div class="form-group">
 						<label>Kategori Berita</label>
-						<select name="id_kategori_berita" class="form-control">
+						<select name="id_kategori" class="form-control">
 							<?php foreach ($kategori as $kategori) { ?>
 								<option value="<?php echo $kategori->id_kategori ?>">
 									<?php echo $kategori->nama_kategori ?></option>

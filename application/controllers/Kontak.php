@@ -43,7 +43,7 @@ class Kontak extends CI_Controller {
 				alert('Oopps ! Ada kesalahan, silahkan ulangi !');
 				window.location = '<?php echo base_url('kontak'); ?>'
 			</script>
-<?php
+		<?php
 		}
 	}
 }

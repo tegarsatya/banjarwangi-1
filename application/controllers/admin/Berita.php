@@ -94,7 +94,7 @@ class Berita extends CI_Controller {
 				$data = array(
 
 					'id_user'				=> $this->session->userdata('id_user'),
-					// 'id_kategori'			=> $i->post('id_kategori'),
+					'id_kategori'			=> $i->post('id_kategori'),
 					'slug_berita'			=> url_title($i->post('nama_berita'), 'dash', TRUE),
 					'nama_berita'			=> $i->post('nama_berita'),
 					'isi'					=> $i->post('isi'),
@@ -201,7 +201,7 @@ class Berita extends CI_Controller {
 				$data = array(
 					'id_berita'				=> $id_berita,
 					'id_user'				=> $this->session->userdata('id_user'),
-					// 'id_kategori_berita'	=> $i->post('id_kategori_berita'),
+					'id_kategori'			=> $i->post('id_kategori'),
 					'slug_berita'			=> url_title($i->post('nama_berita'), 'dash', TRUE),
 					'nama_berita'			=> $i->post('nama_berita'),
 					'isi'					=> $i->post('isi'),

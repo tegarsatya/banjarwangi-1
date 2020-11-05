@@ -73,7 +73,7 @@ echo form_open_multipart('admin/berita/edit/' . $berita->id_berita);
 				<div class="col-md-6">
 					<div class="form-group">
 						<label>Kategori Berita</label>
-						<select name="id_kategori_berita" class="form-control">
+						<select name="id_kategori" class="form-control">
 							<?php foreach ($kategori as $kategori) { ?>
 								<option value="<?php echo $kategori->id_kategori ?>">
 									<?php if ($berita->id_kategori == $kategori->id_kategori) {

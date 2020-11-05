@@ -48,12 +48,14 @@ class Berita extends CI_Controller {
 	public function read($slug_berita)
 	{
 		$berita	= $this->berita_model->home();
+		$listing 	= $this->berita_model->listing();
 		$read	= $this->berita_model->read($slug_berita);
 
 		$data	= array(
 			'title'	=> $read->nama_berita,
 			'keywords' => $read->nama_berita,
 			'berita'	=> $berita,
+			'listing'	=> $listing,
 			'read'		=> $read,
 			'isi'		=> 'berita/read'
 		);

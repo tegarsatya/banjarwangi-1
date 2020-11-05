@@ -5,7 +5,7 @@
 		<nav class="classy-navbar justify-content-between" id="cleverNav">
 
 			<!-- Logo -->
-			<a class="nav-brand" href="<?php echo base_url('home') ?>"><img src="assets/frontend/img/core-img/logo.png" alt=""></a>
+			<a class="nav-brand" href="<?php echo base_url('home') ?>"><img src="assets/upload/IMG-20200920-WA0047.jpg" alt="" style=" width: 75px; height: 75px;"></a>
 
 			<!-- Navbar Toggler -->
 			<div class="classy-navbar-toggler">
@@ -36,7 +36,7 @@
 
 					<!-- Search Button -->
 					<div class="search-area">
-						<form action="#" method="post">
+						<form action="<?= base_url('')?>" method="post">
 							<input type="search" name="search" id="search" placeholder="Search">
 							<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 						</form>
